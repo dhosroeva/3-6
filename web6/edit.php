@@ -211,7 +211,7 @@ else {
         $upd->execute(array($name,$email,$year,$sex,$limb,$bio,$id));
         $del=$db->prepare("delete from superpwrs where person_id=?");
         $del->execute(array($id));
-        $upd=$db->prepare("insert into supers set power_name=?,person_id=?");
+        $upd=$db->prepare("insert into superpwrs set power_name=?,person_id=?");
         foreach($pwrs as $pwr){
           $upd->execute(array($pwr,$id));
         }
@@ -240,6 +240,6 @@ else {
     header('Location: admin.php');
   }
   elseif(!empty($_POST['back'])){
-    header('Loction: admin.php');
+    header('Loction: /admin.php');
   }
 }
