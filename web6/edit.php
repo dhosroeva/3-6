@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       $values['sex']=$user[0]['sex'];
       $values['limb']=$user[0]['limb'];
       $values['bio']=$user[0]['bio'];
-      $get2=$db->prepare("select p_name from superpwrs where person_id=?");
+      $get2=$db->prepare("select power_name from superpwrs where person_id=?");
       $get2->execute(array($id));
       $powers=$get2->fetchALL();
       for($i=0;$i<count($powers);$i++){
@@ -239,7 +239,7 @@ else {
     setcookie('del_user',$id);
     header('Location: admin.php');
   }
-  else{
+  elseif(!empty($_POST['back'])){
     header('Loction: admin.php');
   }
 }

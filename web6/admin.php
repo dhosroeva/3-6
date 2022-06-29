@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
     $app=$db->prepare("select * from application");
     $app->execute();
     $users=$app->fetchALL();
-    $power=$db->prepare("select person_id,power_name from superpwrs");
+    $power=$db->prepare("select * from superpwrs");
     $power->execute();
     $powers=$power->fetchALL();
     $count=$db->prepare("select count(*) from superpwrs where power_name=?");
