@@ -31,7 +31,7 @@
                     "flight"=>FALSE
                 );
                 foreach($powers as $pwr){
-                    if($powers['id']==$user['id']){
+                    if($powers['person_id']==$user['id']){
                         if($pwr['power_name']=='Бессмертие'){
                             $user_pwrs['immortal']=TRUE;
                         }
