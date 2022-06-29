@@ -55,7 +55,7 @@ if (!empty($messages)) {
     <select name="power[]" size="3" multiple <?php if ($errors['power']) {print 'class="error"';} ?>>
       <option value="Телепортация" <?php if($values['teleport']==1){print 'selected';} ?>>Телепортация</option>
       <option value="Бессмертие" <?php if($values['immortal']==1){print 'selected';} ?>>Бессмертие</option>
-      <option value="Телепатия" <?php if($values['telepat']==1){print 'selected';} ?>>Телепатия</option>
+      <option value="Полет" <?php if($values['flight']==1){print 'selected';} ?>>Полет</option>
     </select> <br>
     <label> Краткая биография </label> <br>
     <textarea name="bio" rows="10" cols="15"><?php print $values['bio']; ?></textarea> <br>
