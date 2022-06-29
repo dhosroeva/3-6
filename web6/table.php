@@ -30,7 +30,7 @@
                     "teleport"=>FALSE,
                     "flight"=>FALSE
                 );
-                foreach($pwrs as $pwr){
+                foreach($powers as $pwr){
                     if($powers['id']==$user['id']){
                         if($pwr['power_name']=='Бессмертие'){
                             $user_pwrs['immortal']=TRUE;
