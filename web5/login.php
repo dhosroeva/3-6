@@ -35,9 +35,9 @@ else {
     try{
       $chk=$db->prepare("select * from users where login=?");
       $chk->execute(array($l));
-      $username=$chk->fetchALL();
-      if(password_verify($p,$username[0]['pass'])){
-        $uid=$username[0]['id'];
+      $username=$chk->fetchALL()[0];
+      if(md5($p)==$username['pass']){
+        $uid=$username['id'];
         $error=FALSE;
       }
     }
